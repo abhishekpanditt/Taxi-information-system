@@ -20,9 +20,8 @@ public class DailyStatisticsController {
         dailyStatisticsService.calculateAndInsertDailyStatistics();
     }
 
-//    @GetMapping("/calculate-statistics")
-//    public String calculateStatisticsManually() throws Exception {
-//        dailyStatisticsService.calculateAndInsertDailyStatistics();
-//        return "Statistics calculation initiated manually.";
-//    }
+    @GetMapping("/check_status")
+    public String checkStatus() throws Exception {
+        return "Statistics calculation initiated manually.";
+    }
 }
