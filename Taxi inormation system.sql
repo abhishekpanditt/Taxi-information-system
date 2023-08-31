@@ -1,0 +1,1 @@
+SELECT * FROM vehicle_information_system.dailystatistics;
