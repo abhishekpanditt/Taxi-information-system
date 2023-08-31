@@ -6,6 +6,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Table(name = "vehicle")
 @NoArgsConstructor
@@ -18,5 +21,11 @@ public class Vehicle {
     private int id;
     private String vehicleNumber;
     private double loadCapacity;
+
+    @OneToMany(mappedBy = "vehicle", cascade = CascadeType.ALL)
+    List<VehicleData> vehicleDataList = new ArrayList<>();
+
+    @OneToMany(mappedBy = "vehicle", cascade = CascadeType.ALL)
+    List<DailyStatistics> dailyStatisticsList = new ArrayList<>();
 }
 
