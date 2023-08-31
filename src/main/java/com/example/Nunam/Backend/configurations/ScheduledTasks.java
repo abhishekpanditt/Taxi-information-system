@@ -13,7 +13,7 @@ public class ScheduledTasks {
     @Autowired
     private DailyStatisticsService dailyStatisticsService;
 
-    @Scheduled(cron = "0 0 0 * *") // Runs at midnight every day
+//    @Scheduled(cron = "0 0 0 * *") // Runs at midnight every day
     public void runDataProcessingAtMidnight() throws Exception {
         dailyStatisticsService.calculateAndInsertDailyStatistics();
     }
