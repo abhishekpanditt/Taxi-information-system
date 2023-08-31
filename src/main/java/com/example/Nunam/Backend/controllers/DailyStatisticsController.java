@@ -22,6 +22,6 @@ public class DailyStatisticsController {
 
     @GetMapping("/check_status")
     public String checkStatus() throws Exception {
-        return "Statistics calculation initiated manually.";
+        return "Application is running!";
     }
 }
